@@ -70,7 +70,7 @@ public class PetControllerTests {
     @Test
     public void testProcessCreationFormHasErrors() throws Exception {
         mockMvc.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID)
-            .param("name", "Betty")
+            .param("name", "Nag")
             .param("birthDate", "2015/02/12")
         )
             .andExpect(model().attributeHasNoErrors("owner"))
